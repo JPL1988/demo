@@ -1,0 +1,74 @@
+<!DOCTYPE >
+<html xmlns:th=http://www.thymeleaf.org>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>西南石油大学电子邮件系统</title>
+        <link href="css/index.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div class="title">
+            <div class="head">
+                <div class="logo">
+                    <img src="images/login_logo.png">
+                </div>
+                <a href="" target="_blank" class="help">帮助</a>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box" style="right: 60px; top: 60px; left: auto;" id="box">
+                <ul class="tab" id="tab">
+                    <li onclick="tabClick(this)" id="via_acct" class="current">帐号登录</li>
+                    <li class="dragbar" id="dragbar"></li>
+                </ul>
+
+                <div class="boxc" id="tab_via_acct" style="">
+                    <h3>
+                        用户登录
+                    </h3>
+                    <div class="text_item">
+                        <input
+                            type="text"
+                            class="text"
+                            id="user"
+                            style="font-size: 20px;"
+                            autocomplete="off"
+                            placeholder="用户名">
+                    </div>
+                    <form
+                        name="form_login"
+                        method="post"
+                        action="">
+                        <div class="text_item">
+                            <input
+                                type="password"
+                                class="text"
+                                id="pwd"
+                                name="password"
+                                placeholder="密码">
+                        </div>
+                        <div class="bl">
+                            <span style="float:left">
+                                <input id="password-always-checkbox" type="checkbox"/><span>保存登录信息</span>
+                            </span>
+                            <span class="blt">
+                                <a href="" target="_self">忘记密码</a>
+                            </span>
+                        </div>
+                        <div class="btnb">
+                            <input type="button" name="submit" class="btn" value="登  录" style="float:right;text-align: center;">
+                            <div style="clear:both"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="b">
+            西南石油大学
+        </div>
+ 
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/index.js" type="text/javascript"></script>
+</html>

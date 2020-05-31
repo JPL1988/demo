@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "微软雅黑",Verdana, Geneva, sans-serif;
+    font-size: 12px;
+    background: #fff;
+}
+.title {
+    height: 76px;
+    line-height: 90px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #e5ecf0;
+    overflow: hidden;
+}
+a {
+    outline: none;
+}
+.head {
+    width: 964px;
+    margin: 0 auto;
+}
+.logo {
+    padding-top: 15px;
+    float: left;
+}
+.help {
+    float: right;
+    font-size: 14px;
+    font-weight: 700;
+    color: #787878;
+    text-decoration: none;
+}
+.help:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 964px;
+    height: 460px;
+    margin: 20px auto 0;
+    background: url("../images/login_bg_02.jpg") no-repeat;
+    position: relative;
+}
+.b {
+    height: 70px;
+    border-top: 1px solid #fff;
+    border-radius: 0 0 5px 5px;
+    background: #f7f7f7;
+    clear: both;
+    width: 964px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 70px;
+    color: #999;
+}
+ul {
+    list-style: none;
+}
+
+.box {
+    width: 376px;
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+.text_item {
+    height: 38px;
+    line-height: 38px;
+    width: 292px;
+    margin: 15px 0 30px;
+}
+
+
+.text {
+    height: 36px;
+    line-height: 36px;
+    outline: none;
+    font-size: 20px;
+    width: 280px;
+    border: 1px solid #c7c7c7;
+    background: #f3f3f3;
+    border-radius: 2px;
+    padding: 0 5px;
+    font-family: "微软雅黑";
+}
+
+.bl {
+    color: #999;
+    width: 292px;
+    overflow: hidden;
+    position: relative;
+    top: -3px;
+    font-size: 14px;
+}
+.bl a {
+    color: #999;
+    text-decoration: none;
+}
+.bl a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+.bl input {
+    position: relative;
+    top: 2px;
+    opacity: 0.7;
+}
+
+.tab {
+    border-bottom: 3px solid #ff7e00;
+    border-bottom: 3px solid rgba(255,126,0,0.8);
+    overflow: hidden;
+}
+.tab li {
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    width: 354px;
+    text-align: center;
+    background: url("../images/tabli.png");
+    _background: #333;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.tab li.current {
+    background: url("../images/tablicurrent.png");
+    _background: #ff7e00;
+}
+.tab li.dragbar {
+    width: 22px;
+    background: url("../images/dragbar.png");
+    cursor: move;
+}
+
+.boxc {
+    background: #fff;
+    padding: 20px 0 30px 42px;
+}
+
+.btnb {
+    margin: 20px 0 0;
+    width: 292px;
+    position: relative;
+}
+.btnb a {
+    float: right;
+    color: #787878;
+    text-decoration: none;
+}
+.btnb a:hover {
+    text-decoration: underline;
+}
+.btn {
+    height: 38px;
+    width: 142px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    background: url("../images/login_btn.jpg") 0 0;
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+.btn:hover {
+    background-position: 0 -38px;
+}
+h3 {
+    text-align:center;
+    font-size: 16px;
+    padding-right: 10px;
+}
+.blt {
+    float: right;
+}
+
+h3 a {
+    float: right;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #f60;
+    text-decoration: none;
+    padding-right: 10px;
+}
