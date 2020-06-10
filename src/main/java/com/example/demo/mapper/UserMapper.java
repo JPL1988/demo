@@ -19,5 +19,11 @@ public interface UserMapper {
      * @return user
      */
     User findUser(@Param("name") String name,@Param("pwd") String pwd);
+
+    /**
+     * 查找用户
+     * @param id
+     * @return
+     */
     User findById(int id);
 }
