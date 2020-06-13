@@ -29,8 +29,8 @@ public class NewsManager {
     }
     @RequestMapping("/newsManage")
     public String newsManage(Model model){
-        logger.info("newsManage_____________________");
         List<News> news = newsService.findNews();
+        //填充数据到model中
         model.addAttribute("news",news);
         return "newsManage";
     }

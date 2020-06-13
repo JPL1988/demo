@@ -17,17 +17,15 @@
     	<tr class="tb_title">
         	<td width="10%">ID</td>
             <td width="30%">标题</td>
-            <td width="12%">内容</td>
             <td width="12%">来源</td>
-            <td width="10%">时间</td>
+            <td width="16%">时间</td>
             <td width="26%">操作</td>
         </tr>
         <tr th:each="news : ${news}">
-        	<td width="10%" th:text="${news.id}">01</td>
-            <td width="30%" th:text="${news.title}">Jsp</td>
-            <td width="12%" th:text="${news.article}">JSP基础知识</td>
-            <td width="12%" th:text="${news.source}">Tom</td>
-            <td width="10%" th:text="${news.time}">2021/06/11</td>
+        	<td width="10%" th:text="${news.id}"></td>
+            <td width="30%" th:text="${news.title}"></td>
+            <td width="12%" th:text="${news.source}"></td>
+            <td width="16%" th:text="${news.time}"></td>
             <td width="26%">
             	<input class="bj_btn" type="button" value="编辑" />
                 <input class="sj_btn" type="button" value="添加" />
