@@ -1,7 +1,9 @@
 package com.example.demo.controler;
 
+import com.example.demo.entity.News;
 import com.example.demo.result.LoginResult;
 import com.example.demo.service.LoginService;
+import com.example.demo.service.NewsService;
 import com.fasterxml.jackson.core.JsonFactoryBuilder;
 import net.sf.json.JSON;
 import net.sf.json.JSONObject;
@@ -27,8 +29,17 @@ import java.util.Enumeration;
  */
 @Controller
 public class Login {
+    /**
+     * 登录服务
+     */
     @Autowired
     LoginService loginService;
+
+    /**
+     * 新闻服务
+     */
+    @Autowired
+    NewsService newsService;
 
     Logger logger = LoggerFactory.getLogger(this.getClass());
     @RequestMapping("/login")
@@ -57,8 +68,11 @@ public class Login {
     @RequestMapping("/admin")
     public String Admin(Model model,
                         @RequestParam("user") String name){
-        logger.error("name:"+name);
+        logger.info("name:"+name);
         model.addAttribute("user",name);
+        News news= newsService.findById(1);
+        logger.info(news.toString());
+        model.addAttribute("news",news);
         return "admin";
     }
     @ResponseBody

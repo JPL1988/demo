@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.util.Date;
 
 /**
@@ -10,7 +13,7 @@ public class News {
     private int id;
     private String title;
     private String article;
-    private Date time;
+    private String time;
     private String source;
 
     public int getId() {
@@ -37,11 +40,11 @@ public class News {
         this.article = article;
     }
 
-    public Date getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(Date time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -51,5 +54,16 @@ public class News {
 
     public void setSource(String source) {
         this.source = source;
+    }
+
+    @Override
+    public String toString() {
+        return "News{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", article='" + article + '\'' +
+                ", time=" + time +
+                ", source='" + source + '\'' +
+                '}';
     }
 }
