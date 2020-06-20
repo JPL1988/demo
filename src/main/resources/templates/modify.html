@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th=http://www.thymeleaf.org>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>修改新闻</title>
+	<link rel="stylesheet" type="text/css" href="css/Iframe.css" th:href="@{css/Iframe.css}" />
+	<link rel="stylesheet" type="text/css" th:href="@{css/revise.css}" />
+	<link rel="stylesheet" th:href="@{utilLib/bootstrap.min.css}" type="text/css" media="screen" />
+	<link th:href="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css}" rel="stylesheet">
+	<script type="text/javascript" th:src="@{js/jquery.min.js}" src="js/jquery.min.js"></script>
+	<script type="text/javascript" th:src="@{js/modifyNews.js}" src="js/modifyNews.js"></script>
+</head>
+
+<body>
+    <span class="cp_title">修改新闻</span>
+    <div class="add_cp">
+        <a>修改新闻</a><a style="background-color:#eeeeee;"></a>
+		<a href="#" onclick="modifyNews()" style="pointer-events: painted">提交</a>
+    </div>
+
+    <form action="" method="post"  enctype="multipart/form-data">
+		<table class="tab_content">
+			<tr>
+				<td>文章标题</td><td><input th:newsId="${news.id}" th:value="${news.title}" class="input_title" type="text" name="headline"></td>
+			</tr>
+			<tr>
+				<td>文章来源</td><td><input th:value="${news.source}" class="input_source" type="text" name="source"></td>
+			</tr>
+			<tr>
+				<td>发表时间</td><td><input th:value="${news.time}" class="input_time" type="text" name="time"></td>
+			</tr>
+			<tr>
+				<td>文章内容</td><td><textarea th:utext="${news.article}"  name="content" class="content"></textarea>
+					<script type="text/javascript" th:src="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js}"></script>
+					<script>
+						 var simplemde = new SimpleMDE();
+						 simplemde.value=$('.content').val();
+					</script></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

@@ -5,7 +5,20 @@
     <select id="findNews" resultType="com.example.demo.entity.News">
         select * from news
     </select>
+
     <select id="findById" resultType="com.example.demo.entity.News">
         select * from news where id=#{id}
     </select>
+
+    <delete id="delById">
+        delete from news where id=#{id}
+    </delete>
+    <insert id="insertNews">
+        insert into news(title, article, time, source)
+        values (#{title},#{article},#{time},#{source})
+    </insert>
+    <update id="modifyNews">
+        update news set time=#{time },title=#{title},article=#{article},source=#{source}
+        where id=#{id}
+    </update>
 </mapper>

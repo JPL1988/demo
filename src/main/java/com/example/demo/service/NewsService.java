@@ -27,4 +27,16 @@ public class NewsService {
     public List<News> findNews(){
         return newsMapper.findNews();
     }
+
+    public boolean delById(int id){
+        return newsMapper.delById(id)==1;
+    }
+
+    public boolean insertNews(News news){
+        return newsMapper.insertNews(news)==1;
+    }
+
+    public boolean modifyNews(News news){
+        return newsMapper.modifyNews(news)==1;
+    }
 }

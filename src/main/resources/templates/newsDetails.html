@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th=http://www.thymeleaf.org>
+<head>
+    <meta charset="UTF-8">
+    <title>今日新闻</title>
+</head>
+
+<body>
+<div style="width: 100%;border-bottom: 1px solid black;">
+    <span th:text="${news.title}" style="display: block;width: 300px;height: 70px;font-size: 30px;font-weight: bolder; padding-left: 50%;margin-left: -150px"></span>
+</div>
+<div style="margin-left: 10%">
+    <span th:text="${news.time}"></span>
+</div>
+<div th:content="${news.article}" id="test" style="float: right;margin-top: -24px;margin-right: 10%">
+    <span th:text="${news.source}">source</span>
+</div>
+<div id="content" style="padding-left: 50%;width: 600px;margin-left: -300px">
+</div>
+</body>
+<script th:src="@{http://cdn.bootcss.com/highlight.js/8.0/highlight.min.js}"></script>
+<script type="text/javascript" th:src="@{js/jquery.min.js}" src="js/jquery.min.js"></script>
+<script th:src="@{https://cdn.jsdelivr.net/npm/marked/marked.min.js}"></script>
+<script>
+    $('#content').html(marked($('#test').attr('content')));
+</script>
+</html>

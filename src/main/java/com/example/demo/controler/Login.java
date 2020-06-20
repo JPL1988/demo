@@ -70,9 +70,6 @@ public class Login {
                         @RequestParam("user") String name){
         logger.info("name:"+name);
         model.addAttribute("user",name);
-        News news= newsService.findById(1);
-        logger.info(news.toString());
-        model.addAttribute("news",news);
         return "admin";
     }
     @ResponseBody

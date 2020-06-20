@@ -23,4 +23,25 @@ public interface NewsMapper {
      * @return
      */
     News findById(int id);
+
+    /**
+     * 通过id删除新闻
+     * @param id
+     * @return
+     */
+    int delById(int id);
+
+    /**
+     * 插入一条新闻
+     * @param news 新闻
+     * @return
+     */
+    int insertNews(News news);
+
+    /**
+     * 修改新闻
+     * @param news 新闻
+     * @return
+     */
+    int modifyNews(News news);
 }

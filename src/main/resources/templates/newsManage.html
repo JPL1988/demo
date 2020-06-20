@@ -2,15 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th=http://www.thymeleaf.org>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>新闻管理</title>
-<link rel="stylesheet" type="text/css" th:href="@{css/Iframe.css}" />
-<link rel="stylesheet" th:href="@{utilLib/bootstrap.min.css}" type="text/css" media="screen" />
+    <title>新闻管理</title>
+    <script type="text/javascript" th:src="@{js/jquery.min.js}" src="js/jquery.min.js"></script>
+    <script type="text/javascript" th:src="@{js/newsManager.js}" src="js/newsManager.js"></script>
+    <link rel="stylesheet" type="text/css" th:href="@{css/Iframe.css}" />
+    <link rel="stylesheet" th:href="@{utilLib/bootstrap.min.css}" type="text/css" media="screen" />
 </head>
 
 <body>
 <span class="cp_title">新闻管理</span>
 <div class="add_cp">
-	<a href="">+添加新闻</a>
+	<a href="/addNews" target="menuFrame">+添加新闻</a>
 </div>
 <div class="table_con">
 	<table>
@@ -26,10 +28,15 @@
             <td width="30%" th:text="${news.title}"></td>
             <td width="12%" th:text="${news.source}"></td>
             <td width="16%" th:text="${news.time}"></td>
-            <td width="26%">
-            	<input class="bj_btn" type="button" value="编辑" />
-                <input class="sj_btn" type="button" value="添加" />
-                <input class="del_btn" type="button" value="删除" />
+            <td width="26%" th:newsId="${news.id}">
+            	<input onclick="modifyNews(this)" class="bj_btn" type="button" value="编辑" />
+                <a href="/addNews" target="menuFrame">
+                    <input class="sj_btn" type="button" value="添加" />
+                </a>
+                <input style="margin-left: 6px" onclick="delNews(this)" class="del_btn" type="button" value="删除" />
+                <a th:href="@{'/newsDetails?newsId='+${news.id}}" target="menuFrame">
+                    <input style="margin-left: 6px" class="sj_btn" type="button" value="查看" />
+                </a>
             </td>
         </tr>   
     </table>
