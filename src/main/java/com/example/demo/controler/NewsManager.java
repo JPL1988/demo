@@ -100,6 +100,7 @@ public class NewsManager {
         news.setId(newsId);
         logger.info(news.toString());
         if(newsService.modifyNews(news)){
+            logger.info(newsService.findById(newsId).toString());
             return "true";
         }
         return "false";

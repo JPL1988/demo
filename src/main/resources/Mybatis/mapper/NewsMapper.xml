@@ -18,7 +18,7 @@
         values (#{title},#{article},#{time},#{source})
     </insert>
     <update id="modifyNews">
-        update news set time=#{time },title=#{title},article=#{article},source=#{source}
+        update news set time=#{time},title=#{title},article=#{article},source=#{source}
         where id=#{id}
     </update>
 </mapper>

@@ -9,6 +9,7 @@
 	<link th:href="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css}" rel="stylesheet">
 	<script type="text/javascript" th:src="@{js/jquery.min.js}" src="js/jquery.min.js"></script>
 	<script type="text/javascript" th:src="@{js/modifyNews.js}" src="js/modifyNews.js"></script>
+	<script type="text/javascript" th:src="@{https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js}"></script>
 </head>
 
 <body>
@@ -31,10 +32,9 @@
 			</tr>
 			<tr>
 				<td>文章内容</td><td><textarea th:utext="${news.article}"  name="content" class="content"></textarea>
-					<script type="text/javascript" th:src="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js}"></script>
 					<script>
 						 var simplemde = new SimpleMDE();
-						 simplemde.value=$('.content').val();
+						 simplemde.value($('.content').val());
 					</script></td>
 			</tr>
 		</table>

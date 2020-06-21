@@ -20,10 +20,10 @@ function modifyNews() {
         return;
     }
     var newsId = $('.input_title').attr('newsId');
+    alert(content);
     $.post('/modifyNews',{'newsId':newsId,'title':title,'content':content,'source':source,'time':time},function (result) {
         if(result=='true'){
-            alert("修改成功");
-            window.parent.menuFrame.location.href= "/newsDetails?newsId="+value;
+            window.parent.menuFrame.location.href= "/newsDetails?newsId="+newsId;
         }else {
             alert("请稍后重试");
         }

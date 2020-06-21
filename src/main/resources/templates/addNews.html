@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="css/Iframe.css" th:href="@{css/Iframe.css}" />
 	<link rel="stylesheet" type="text/css" th:href="@{css/revise.css}" />
 	<link rel="stylesheet" th:href="@{utilLib/bootstrap.min.css}" type="text/css" media="screen" />
-	<link th:href="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.css}" rel="stylesheet">
+	<link rel="stylesheet" th:href="@{https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css}">
+	<script th:src="@{https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js}"></script>
 </head>
 
 <body>
@@ -28,7 +29,6 @@
 			</tr>
 			<tr>
 				<td>文章内容</td><td><textarea name="content"  class="content"></textarea>
-					<script type="text/javascript" th:src="@{https://cdn.bootcss.com/simplemde/1.11.2/simplemde.min.js}"></script>
 					<script>
 						 var simplemde = new SimpleMDE();
 					</script>

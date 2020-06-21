@@ -30,9 +30,6 @@
             <td width="16%" th:text="${news.time}"></td>
             <td width="26%" th:newsId="${news.id}">
             	<input onclick="modifyNews(this)" class="bj_btn" type="button" value="编辑" />
-                <a href="/addNews" target="menuFrame">
-                    <input class="sj_btn" type="button" value="添加" />
-                </a>
                 <input style="margin-left: 6px" onclick="delNews(this)" class="del_btn" type="button" value="删除" />
                 <a th:href="@{'/newsDetails?newsId='+${news.id}}" target="menuFrame">
                     <input style="margin-left: 6px" class="sj_btn" type="button" value="查看" />

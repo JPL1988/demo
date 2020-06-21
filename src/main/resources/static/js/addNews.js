@@ -19,6 +19,7 @@ function add() {
         alert("发表时间不能为空");
         return;
     }
+    alert(content);
     $.post('/insertNews',{'title':title,'content':content,'source':source,'time':time},function (result) {
         if(result=='true'){
             alert("发布成功,请到新闻列表查看新闻");
